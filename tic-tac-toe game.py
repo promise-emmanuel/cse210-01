@@ -235,7 +235,7 @@ def game(frm_main):
 
         # check if tie
         elif count == 9 and winner == False:
-            messagebox.showinfo("Tic-Tac-Toe", "It's a Tie!!. No one wins.")
+            messagebox.showinfo("Tic-Tac-Toe", "It's a Tie!!. No one wins. \n kindly reset or exit the game.")
 
             
 
