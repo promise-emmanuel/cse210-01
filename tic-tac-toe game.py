@@ -1,10 +1,12 @@
-''' The user will play this game against the computer.
-    the user will play as X, while the computer will play as O.
-
-    we will also need to have a code that will check if anyone has gotten 
+''' The user will play this game choosing a side ("X" or "O") before the game starts .
+    
+    for this game,
+    we will need to have a code that will check if anyone has gotten 
     3 in a row, or if there has been a tie.
 
-    We also need to make sure no two X's or O's share the same spot.
+    we will also need an option that resets the game after there is a win or a tie. 
+
+    We also need to make sure no two X's or O's share the same spot, and also that all the buttons are disabled after a win or tie.
 
  '''
 
@@ -25,6 +27,8 @@ def main():
     # root.geometry('1200*710')
 
     # call functions that will draw the buttons and other functions necessary for the game to work properly
+    #  start the game by building the buttons, giving the buttons commands when clicked and checking as each player's clicks,
+    #  if it's a tie, or a win.
     game(lat_main)
     
 
@@ -39,11 +43,12 @@ def main():
 
     root.mainloop()
 
+# when the reset option is clicked, the reset function would be called.
+# this function would load the game from scratch anytime it is called
 def reset():
     game(root)
 
-#  start the game by building the buttons, giving the buttons commands when clicked and checking as each player's clicks,
-#  if it's a tie, or a win.
+
 
 def game(frm_main):
     global b1, b2, b3, b4, b5, b6, b7, b8, b9
@@ -51,7 +56,7 @@ def game(frm_main):
     clicked = True
     count= 0
 
-    #build our boxes
+    #build our boxes and give it a command when clicked
     b1 = Button(frm_main, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b1))
     b2 = Button(frm_main, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b2))
     b3 = Button(frm_main, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b3))
