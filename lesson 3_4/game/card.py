@@ -35,9 +35,9 @@ class Card:
         user_guess = input("Will the next card be higher or lower than current card? [h/l]: ")
         user_guess = user_guess.lower()
         
-        while user_guess != ("h" or "l"):
-            print("Invalid input! \nEnter h/l.")
-            user_guess = input("Will the next card be higher or lower than current card? [h/l]: ")
+        # while user_guess != ("h" or "l"):
+            # print("Invalid input! \nEnter h/l.")
+            # user_guess = input("Will the next card be higher or lower than current card? [h/l]: ")
 
         if self.next_card > self.current_card and user_guess == "h":
             self.point += 100 
@@ -48,3 +48,5 @@ class Card:
         elif self.next_card < self.current_card and user_guess == "l":
             self.point += 100
         
+        else:
+            print("invalid response \n please enter 'h' or 'l. "  )
