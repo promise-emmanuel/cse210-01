@@ -56,7 +56,7 @@ def game(frm_main):
     clicked = True
     count= 0
 
-    #build our boxes and give it a command when clicked
+    #build our boxes and give it a command when clicked 
     b1 = Button(frm_main, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b1))
     b2 = Button(frm_main, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b2))
     b3 = Button(frm_main, text=" ", font=("Helvetica", 20), height=3, width=6, bg="SystemButtonFace", command=lambda: b_click(b3))
